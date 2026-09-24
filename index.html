@@ -4,17 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href>
+    <title>Alan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/pokeball.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
+            <a href="#home" class="nav-brand">Alan</a>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -23,31 +34,166 @@
 
     <section id="home">
         <div class="hero">
-            <h1>Hi, I'm John Doe</h1>
-            <p>I'm a web developer</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="about">
-            <h1>About Me</h1>
-            <p>I'm a web developer</p>
+            <div class="hero-content">
+                <h1>Hi, I'm <i>Alan</i></h1>
+                <p>I'm a junior game developer who build <i>games</i> and <i>applications</i>. </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/arlandoapraharjo" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary" id="hero-github-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        GitHub Profile
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="images/charmander_pixel.png" alt="Pixel Art Character" class="hero-pixel-avatar">
+            </div>
         </div>
     </section>
 
     <section id="projects">
         <div class="projects">
-            <h1>Projects</h1>
-            <p>I'm a web developer</p>
+            <div class="section-header">
+                <h1>Selected <i>Projects</i></h1>
+                <p>Projects that i've built</p>
+            </div>
+
+            <!-- Page 1: 2 Projects -->
+            <div class="projects-page active" data-page="1">
+                <!-- Project 1: ChemLink -->
+                <article class="project-card">
+                    <div class="card-glare" aria-hidden="true"></div>
+                    <div class="project-image-wrapper">
+                        <img src="images/project-crud.png" alt="ChemLink Agriculture Inventory and POS System Preview"
+                            class="project-image" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">C#</span>
+                        </div>
+                        <h2 class="project-title">ChemLink Inventory System</h2>
+                        <p class="project-description">A comprehensive point-of-sale and inventory desktop application
+                            for agricultural kiosks, featuring real-time stock monitoring, automated alerts, and
+                            transaction records.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/arlandoapraharjo/Chemlink" target="_blank"
+                                rel="noopener noreferrer" class="btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                View on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Mebby English Tutor Bot -->
+                <article class="project-card">
+                    <div class="card-glare" aria-hidden="true"></div>
+                    <div class="project-image-wrapper">
+                        <img src="images/project-bot.png" alt="Mebby AI English Tutor Bot Preview" class="project-image"
+                            loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Telegram Bot</span>
+                        </div>
+                        <h2 class="project-title">Mebby English Tutor Bot</h2>
+                        <p class="project-description">An interactive Telegram learning bot powered by Gemini AI, backed
+                            by a 1,000-exercise content bank across 5 tracks with dynamic language evaluation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/arlandoapraharjo/mebby-telegram-bot" target="_blank"
+                                rel="noopener noreferrer" class="btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                View on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Page 2: Project 3 -->
+            <div class="projects-page" data-page="2">
+                <!-- Project 3: Chaosmal Defense -->
+                <article class="project-card">
+                    <div class="card-glare" aria-hidden="true"></div>
+                    <div class="project-image-wrapper">
+                        <img src="images/project-game.png" alt="Chaosmal Defense Tower Defense Preview"
+                            class="project-image" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">GDScript</span>
+                            <span class="tag">Godot Engine</span>
+                        </div>
+                        <h2 class="project-title">Chaosmal Defense</h2>
+                        <p class="project-description">A tactical 2D isometric tower defense game featuring strategic
+                            tower placement, wave-based progression, and custom pixel art assets.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/arlandoapraharjo/chaosmal-defense-td" target="_blank" rel="noopener noreferrer"
+                                class="btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                View on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Project Pagination Controls -->
+            <div class="projects-pagination">
+                <button type="button" class="pagination-btn" id="prev-page" aria-label="Previous projects"
+                    disabled>&larr; Prev</button>
+                <div class="pagination-indicator">
+                    <span id="current-page-num">01</span>
+                    <span class="pagination-divider">/</span>
+                    <span id="total-page-num">02</span>
+                </div>
+                <button type="button" class="pagination-btn" id="next-page" aria-label="Next projects">Next
+                    &rarr;</button>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="contact">
-            <h1>Contact Me</h1>
-            <p>I'm a web developer</p>
+            <h1>Contact <i>Me</i></h1>
+            <p><a href="mailto:alan.dev@example.com">alan.dev@example.com</a></p>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2026 arlandopraharjo</p>
+    </footer>
+
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>
